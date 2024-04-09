@@ -13,7 +13,10 @@ nav:
           - TDD: coding/tdd.md
           - Clean Code: coding/clean_code.md
       - Software Architecture:
-          - SOLID: architecture/solid.md
+          - Principles:
+            - architecture/principles/principles.md
+            - SOLID: architecture/principles/solid.md
+            - DRY: architecture/principles/dry.md
           - Domain Driven Design: architecture/domain_driven_design.md
       - GIT: git.md
 
@@ -52,6 +55,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
 theme:
   name: material
   custom_dir: theme
