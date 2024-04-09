@@ -1,5 +1,5 @@
 ---
-title: Domain Driven Design
+title: KISS
 date: 20240409
 author: bresserbj
 ---

@@ -1,5 +1,5 @@
 ---
-title: Principles
+title: Prinzipien
 date: 20240409
 author: bresserbj
 ---
