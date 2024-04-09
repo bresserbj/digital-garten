@@ -26,12 +26,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bresserbj.github.io/architecture/principles/kiss/</loc>
+         <lastmod>2024-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bresserbj.github.io/architecture/principles/principles/</loc>
          <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bresserbj.github.io/architecture/principles/solid/</loc>
+         <lastmod>2024-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bresserbj.github.io/arts/photography/photography/</loc>
          <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
