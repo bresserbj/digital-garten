@@ -51,7 +51,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bresserbj.github.io/coding/rule_of_three/</loc>
+         <lastmod>2024-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bresserbj.github.io/coding/tdd/</loc>
+         <lastmod>2024-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bresserbj.github.io/coding/kotlin/kotlin/</loc>
          <lastmod>2024-04-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
