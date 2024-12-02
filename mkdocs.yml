@@ -96,6 +96,4 @@ extra_css: [stylesheets/extra.css, stylesheets/links.css]
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/lyz-code
-    - icon: fontawesome/solid/rss
-      link: https://lyz-code.github.io/blue-book/newsletter/0_newsletter_index
+      link: https://github.com/bresserbj
