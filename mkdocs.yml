@@ -14,12 +14,14 @@ nav:
           - TDD: coding/tdd.md
           - Clean Code: coding/clean_code.md
       - Software Architektur:
+          - architecture/goal.md
           - Prinzipien:
             - architecture/principles/principles.md
             - SOLID: architecture/principles/solid.md
             - DRY: architecture/principles/dry.md
             - KISS: architecture/principles/kiss.md
           - Domain Driven Design: architecture/domain_driven_design.md
+          - Hexagonal Architecture: architecture/hexagonal_architecture.md
       - GIT: git.md
       - Rule of Three: coding/rule_of_three.md
   - Kultur:
