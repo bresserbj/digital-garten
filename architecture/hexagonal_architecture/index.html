@@ -9,16 +9,16 @@
         <meta name="description" content="My personal digital garden">
       
       
-        <meta name="author" content="Bresserbj">
+        <meta name="author" content="bresserbj">
       
       
-        <link rel="canonical" href="https://bresserbj.github.io/architecture/domain_driven_design/">
+        <link rel="canonical" href="https://bresserbj.github.io/architecture/hexagonal_architecture/">
       
       
-        <link rel="prev" href="../principles/kiss/">
+        <link rel="prev" href="../domain_driven_design/">
       
       
-        <link rel="next" href="../hexagonal_architecture/">
+        <link rel="next" href="../../git/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Domain Driven Design - My digital garden</title>
+        <title>Hexagonal Architecture - My digital garden</title>
       
     
     
@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#was-ist-eine-hexagonale-architektur" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -113,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Domain Driven Design
+              Hexagonal Architecture
             
           </span>
         </div>
@@ -707,6 +712,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain_driven_design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domain Driven Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -717,29 +743,18 @@
       
       
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
   
   <span class="md-ellipsis">
-    Domain Driven Design
+    Hexagonal Architecture
   </span>
   
 
-      </a>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hexagonal_architecture/" class="md-nav__link">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -748,6 +763,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#was-ist-eine-hexagonale-architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was ist eine Hexagonale Architektur?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ports-und-adapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ports und Adapter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steuernde-und-gesteuerte-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steuernde und gesteuerte Ports
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steuernde und gesteuerte Ports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependency-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Rule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependency-inversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Inversion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dilemma-der-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dilemma der Isolation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vorteile-der-hexagonalen-architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vorteile der Hexagonalen Architektur
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachteile-der-hexagonalen-architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nachteile der Hexagonalen Architektur
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -934,6 +1045,92 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#was-ist-eine-hexagonale-architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was ist eine Hexagonale Architektur?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ports-und-adapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ports und Adapter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steuernde-und-gesteuerte-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steuernde und gesteuerte Ports
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steuernde und gesteuerte Ports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependency-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Rule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependency-inversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Inversion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dilemma-der-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dilemma der Isolation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vorteile-der-hexagonalen-architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vorteile der Hexagonalen Architektur
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachteile-der-hexagonalen-architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nachteile der Hexagonalen Architektur
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -947,7 +1144,127 @@
                   
 
 
-  <h1>Domain Driven Design</h1>
+  <h1>Hexagonal Architecture</h1>
+
+<h3 id="was-ist-eine-hexagonale-architektur">Was ist eine Hexagonale Architektur?<a class="headerlink" href="#was-ist-eine-hexagonale-architektur" title="Permanent link">⚑</a></h3>
+<p>Eine Hexagonale Architektur, oder auch "Ports und Adapter" genannt, zeichnet sich laut des Autors Alistair Cockburn
+durch nachfolgende drei Ziele aus:</p>
+<ol>
+<li>Es soll keinen Unterschied machen ob die Businesslogik von einer UI, einer API oder einem Test-Framework aufgerufen wird.</li>
+<li>Die Businesslogik soll isoliert von der Datenbank und sonstiger Infrastruktur oder Drittsystemene entwickelt und
+   getestet werden koennen. </li>
+<li>Aenderungen an externen Schnittstellen oder Modernisierungen der Infrastruktur sollen ohne Anpassungen an der 
+   Businesslogik moeglich sein.</li>
+</ol>
+<h3 id="ports-und-adapter">Ports und Adapter<a class="headerlink" href="#ports-und-adapter" title="Permanent link">⚑</a></h3>
+<p>Erreicht werden diese drei Ziele durch die Isolation der Businesslogik ueber sogenannte "Ports" und "Adapter".</p>
+<p>Die Businesslogik liegt im Kern der Anwendung und definiert "Ports" um von ausserhalb gesteuert zu werden und um zu steuern.
+Wichtig ist es, dass es der Businesslogik irrelevant ist, welche technischen Details sich hinter den Ports befinden.
+Alle Komponenten ausserhalb des Kerns sind gegen die Ports zu implementieren.</p>
+<p>Die Anbindung der externen Komponente erfolgt durch "Adapter".</p>
+<p>Applikation &rarr; Port &rarr; Database Adapter &rarr; Database</p>
+<p>An einem Port koennen mehrere Adapter angeschlossen werden. So kann zB. an einen Port zur Steuerung einer Anwendung 
+ein Adapter fuer die UI und ein Adapter fuer eine API angeschlossen sein.</p>
+<h3 id="steuernde-und-gesteuerte-ports">Steuernde und gesteuerte Ports<a class="headerlink" href="#steuernde-und-gesteuerte-ports" title="Permanent link">⚑</a></h3>
+<p>Es gibt zwei Arten von Ports nd Adaptern - steuernde und gesteuerte.
+Steuernde Ports und Adapter werden auch als "driving" oder "primary" bezeichnet.
+Gesteuerte Ports werden als "driven" oder "secondary" bezeichnet.</p>
+<h4 id="dependency-rule">Dependency Rule<a class="headerlink" href="#dependency-rule" title="Permanent link">⚑</a></h4>
+<p>Um die technischen Details und Anbindungen zur Anwendung abzutrennen koenne nwir die sogenannte "Dependency Rule" nutzen.
+Diese besagt, dass Abhaengigkeiten ausschliesslich von aussen nach innen, also in Richtung der Anwendung zeigen duerfen.</p>
+<p>Adapter:
+<div class="highlight"><pre><span></span><code><span class="k">package</span><span class="w"> </span><span class="nn">com.bank.transfer.infrastructure.adapter.driver</span>
+
+<span class="k">import</span><span class="w"> </span><span class="nn">java.math.BigDecimal</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">java.util.UUID</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nc">TransferController</span><span class="p">(</span>
+<span class="w">   </span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">transferMoneyPort</span><span class="p">:</span><span class="w"> </span><span class="n">TransferMoney</span>
+<span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">   </span><span class="kd">fun</span><span class="w"> </span><span class="nf">transfer</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span><span class="w"> </span><span class="n">BigDecimal</span><span class="p">,</span><span class="w"> </span><span class="n">from</span><span class="p">:</span><span class="w"> </span><span class="n">UUID</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="p">:</span><span class="w"> </span><span class="n">UUID</span><span class="p">):</span><span class="w"> </span><span class="n">TransferMoneyRespone</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">transferMoneyPort</span><span class="p">.</span><span class="na">transfer</span><span class="p">(</span><span class="n">TransferMoneyRequest</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span><span class="w"> </span><span class="n">from</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="p">))</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+Port:
+<div class="highlight"><pre><span></span><code><span class="k">package</span><span class="w"> </span><span class="nn">com.bank.transfer.app.port.driver</span>
+
+<span class="k">import</span><span class="w"> </span><span class="nn">java.math.BigDecimal</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">java.util.UUID</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nc">TransferMoney</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="kd">fun</span><span class="w"> </span><span class="nf">transfer</span><span class="p">(</span><span class="n">request</span><span class="p">:</span><span class="w"> </span><span class="n">TransferMoneyRequest</span><span class="p">):</span><span class="w"> </span><span class="n">TransferMoneyRespone</span>
+<span class="p">}</span>
+
+<span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">TransferMoneyRequest</span><span class="p">(</span>
+<span class="w">   </span><span class="kd">val</span><span class="w"> </span><span class="nv">amount</span><span class="p">:</span><span class="w"> </span><span class="n">BigDecimal</span><span class="p">,</span>
+<span class="w">   </span><span class="kd">val</span><span class="w"> </span><span class="nv">from</span><span class="p">:</span><span class="w"> </span><span class="n">UUID</span><span class="p">,</span>
+<span class="w">   </span><span class="kd">val</span><span class="w"> </span><span class="nv">to</span><span class="p">:</span><span class="w"> </span><span class="n">UUID</span>
+<span class="p">)</span>
+
+<span class="kd">sealed</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">TransferMoneyResponse</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="kd">object</span><span class="w"> </span><span class="nc">Success</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">TransferMoneyResponse</span><span class="p">()</span>
+<span class="w">   </span><span class="kd">object</span><span class="w"> </span><span class="nc">InvalidAmount</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">TransferMoneyResponse</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Service:
+<div class="highlight"><pre><span></span><code><span class="k">package</span><span class="w"> </span><span class="nn">com.bank.transfers.app.service</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nc">TransferService</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">TransferMoney</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">transfer</span><span class="p">(</span><span class="n">request</span><span class="p">:</span><span class="w"> </span><span class="n">TransferMoneyRequest</span><span class="p">):</span><span class="w"> </span><span class="n">TransferMoneyRespone</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">TODO</span><span class="p">(</span><span class="s">&quot;Not yet implemented&quot;</span><span class="p">)</span>
+<span class="w">   </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="dependency-inversion">Dependency Inversion<a class="headerlink" href="#dependency-inversion" title="Permanent link">⚑</a></h4>
+<p>Auch hier wird der Port durch ein Interface definiert. Allerdings sind die Beziehungen zwischen den Klassen vertauscht.
+Der Adapter benutzt den Port nicht, sondern implementiert diesen und der Service implementiert den Port nicht sondern
+benutzt ihn.</p>
+<p>Port:
+<div class="highlight"><pre><span></span><code><span class="k">package</span><span class="w"> </span><span class="nn">com.bank.transfers.app.port.driven</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nc">AccountFinder</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">find</span><span class="p">(</span><span class="n">customerId</span><span class="p">:</span><span class="w"> </span><span class="n">CustomerId</span><span class="p">):</span><span class="w"> </span><span class="n">Account?</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Adapter
+<div class="highlight"><pre><span></span><code><span class="k">package</span><span class="w"> </span><span class="nn">com.bank.transfers.infrastructure.adapter.driven</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nc">InMemoryAccounts</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">AccountFinder</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">accounts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableMapOf</span><span class="o">&lt;</span><span class="n">CustomerId</span><span class="p">,</span><span class="w"> </span><span class="n">Account</span><span class="o">&gt;</span><span class="p">()</span>
+
+<span class="w">   </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">find</span><span class="p">(</span><span class="n">customerId</span><span class="p">:</span><span class="w"> </span><span class="n">CustomerId</span><span class="p">):</span><span class="w"> </span><span class="n">Account? </span><span class="o">=</span><span class="w"> </span><span class="n">accounts</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">customerId</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Services:
+<div class="highlight"><pre><span></span><code><span class="k">package</span><span class="w"> </span><span class="nn">com.bank.transfers.app.service</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nc">AccountService</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">accountFinder</span><span class="p">:</span><span class="w"> </span><span class="n">AccountFinder</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">find</span><span class="p">(</span><span class="n">customerId</span><span class="p">:</span><span class="w"> </span><span class="n">CustomerId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">TODO</span><span class="p">(</span><span class="s">&quot;Not yet implemented&quot;</span><span class="p">)</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="dilemma-der-isolation">Dilemma der Isolation<a class="headerlink" href="#dilemma-der-isolation" title="Permanent link">⚑</a></h3>
+<p>Die Isolierung der technischen Details fuehrt dazu, dass bei der Verwendung von ORM ein Dilemma darin besteht, dass der 
+Kern der Anwendung die Details des Persistierenden Adapters nicht kennen soll, also die Entitaet. </p>
+<p>Hier gibt es einen Loesungsansatz indem man zum einen die Klasse der Entitaet im Adapter hat, die keine Businesslogik
+beinhaltet, aber dafuer die technischen Annotationen fuer die Persistierung, und zum Anderen dem Kern der Anwendung eine
+eigene Modelklasse implementiert.</p>
+<p>Das gleiche Dilemma finden wir auch in API-Adaptern, die oft nicht alle Attribute einer Entitaet sichtbar machen sollen.</p>
+<h3 id="vorteile-der-hexagonalen-architektur">Vorteile der Hexagonalen Architektur<a class="headerlink" href="#vorteile-der-hexagonalen-architektur" title="Permanent link">⚑</a></h3>
+<ul>
+<li>Aenderbarkeit - Die Businesslogik kann geaendert werden ohne die Adapter oder Infrastruktur aendern zu muessen und umgekehrt.</li>
+<li>Isolierung - Der Kern der Anwendung umfasst nur <em>fachliche</em> Themen und <em>technische</em> Themen sind in den Adaptern implementiert.</li>
+<li>Entwicklung - Entwicklung an Komponenten kann aufgeteilt werden.</li>
+<li>Testbarkeit - Komponenten koennen vollstaendig isoliert geteste werden.</li>
+</ul>
+<h3 id="nachteile-der-hexagonalen-architektur">Nachteile der Hexagonalen Architektur<a class="headerlink" href="#nachteile-der-hexagonalen-architektur" title="Permanent link">⚑</a></h3>
+<ul>
+<li>Erheblicher Mehraufwand der sich fur CRUD-Microservices eher nicht lohnt.</li>
+</ul>
 
 
 
@@ -955,7 +1272,8 @@
 
 
 
-
+  
+  
 
 
 
@@ -985,7 +1303,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../principles/kiss/" class="md-footer__link md-footer__link--prev" aria-label="Previous: KISS">
+          <a href="../domain_driven_design/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Domain Driven Design">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -995,20 +1313,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                KISS
+                Domain Driven Design
               </div>
             </div>
           </a>
         
         
           
-          <a href="../hexagonal_architecture/" class="md-footer__link md-footer__link--next" aria-label="Next: Hexagonal Architecture">
+          <a href="../../git/" class="md-footer__link md-footer__link--next" aria-label="Next: GIT">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Hexagonal Architecture
+                GIT
               </div>
             </div>
             <div class="md-footer__button md-icon">
