@@ -12,9 +12,13 @@
         <meta name="author" content="bresserbj">
       
       
-        <link rel="canonical" href="https://bresserbj.github.io/arts/writing/split_keyboard/">
+        <link rel="canonical" href="https://bresserbj.github.io/coding/kotlin/maven/">
       
       
+        <link rel="prev" href="../kotlin/">
+      
+      
+        <link rel="next" href="../../../bash_snippets/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +26,7 @@
     
     
       
-        <title>Split Keyboard - My digital garden</title>
+        <title>Maven - My digital garden</title>
       
     
     
@@ -77,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#project-object-model-pom" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Split Keyboard
+              Maven
             
           </span>
         </div>
@@ -247,17 +256,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -271,7 +282,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Coding
@@ -282,17 +293,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -306,7 +319,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Languages
@@ -317,17 +330,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
@@ -341,7 +356,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1_1">
             <span class="md-nav__icon md-icon"></span>
             Kotlin
@@ -355,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coding/kotlin/kotlin/" class="md-nav__link">
+      <a href="../kotlin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -373,10 +388,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../coding/kotlin/maven/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Maven
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -385,6 +418,75 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-object-model-pom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Object Model - POM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Object Model - POM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lifecycle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wichtige-befehle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wichtige Befehle
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -469,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coding/sql/sql/" class="md-nav__link">
+      <a href="../../sql/sql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coding/tdd/" class="md-nav__link">
+      <a href="../../tdd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -554,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coding/clean_code/" class="md-nav__link">
+      <a href="../../clean_code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -837,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coding/rule_of_three/" class="md-nav__link">
+      <a href="../../rule_of_three/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -935,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../photography/photography/" class="md-nav__link">
+      <a href="../../../arts/photography/photography/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -982,6 +1084,65 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-object-model-pom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Object Model - POM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Object Model - POM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lifecycle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wichtige-befehle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wichtige Befehle
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -995,9 +1156,141 @@
                   
 
 
-  <h1>Split Keyboard</h1>
+  <h1>Maven</h1>
 
+<p>Maven ist ein Tool das zur Paketverwaltung in Java-Projekten eingesetzt werden kann um diese zu organisieren und auch
+um Automatisierungen einzubauen. </p>
+<h3 id="project-object-model-pom">Project Object Model - POM<a class="headerlink" href="#project-object-model-pom" title="Permanent link">⚑</a></h3>
+<p>Die Konfiguration eines Projektes, welches Maven einsetzt, wird mittels eines <em>Projekt Object Models</em> (POM) realisiert.
+Dieses PIM wird durch die <em>pom.xml</em> im Projekt-Root abgebildet. </p>
+<p>Diese Datei beschreibt...</p>
+<ul>
+<li>das Projekt</li>
+<li>Abhaengigkeiten zu Paketen</li>
+<li>Konfigurationen von Plugins</li>
+<li>Relationen zu Modulen anderer Projekte</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;project&gt;</span>
+<span class="w">    </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>com.example<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>example<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;packaging&gt;</span>jar<span class="nt">&lt;/packaging&gt;</span>
+<span class="w">    </span><span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<span class="w">    </span><span class="nt">&lt;name&gt;</span>com.example<span class="nt">&lt;/name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>http://maven.apache.org<span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;dependencies&gt;</span>
+<span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">           </span>//...
+<span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/dependencies&gt;</span>
+<span class="w">    </span><span class="nt">&lt;build&gt;</span>
+<span class="w">        </span><span class="nt">&lt;plugins&gt;</span>
+<span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
+<span class="w">            </span>//...
+<span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/plugins&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/build&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div>
+<h4 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">⚑</a></h4>
+<p>Abhaengigkeiten werden in der POM wie folgt definiert:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-core<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;version&gt;</span>5.3.16<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+<h4 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">⚑</a></h4>
+<p>Um eine Verbesserung der Wartbarkeit innerhalb der POM zu gewaehrleisten koennen zB Versionsnummern in <em>properties</em> 
+ueberfuehrt werden um diese wieder zu verwenden. So muss man nur einmal die Versionsnummer anpassen:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;properties&gt;</span>
+<span class="w">    </span><span class="nt">&lt;spring.version&gt;</span>5.3.16<span class="nt">&lt;/spring.version&gt;</span>
+<span class="nt">&lt;/properties&gt;</span>
 
+<span class="nt">&lt;dependencies&gt;</span>
+<span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-core<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">        </span><span class="nt">&lt;version&gt;</span>${spring.version}<span class="nt">&lt;/version&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-context<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">        </span><span class="nt">&lt;version&gt;</span>${spring.version}<span class="nt">&lt;/version&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;/dependencies&gt;</span>
+</code></pre></div>
+<h3 id="lifecycle">Lifecycle<a class="headerlink" href="#lifecycle" title="Permanent link">⚑</a></h3>
+<ul>
+<li>validate - Ueberprueft die Korrektheit des Projektes</li>
+<li>compile - Compiliert den SourceCode in ein Artefakt</li>
+<li>test - Ausfuehrung von Unittests</li>
+<li>package - Kompilierung des Codes</li>
+<li>integration-test - Tests, die auf den Paketen aufbauen</li>
+<li>verify - Validiert die Pakete</li>
+<li>install - Installiert die Pakete in das lokale Maven Repository</li>
+<li>deploy - Deployed die Pakete auf einen Remote Server oder in ein Repository</li>
+</ul>
+<h3 id="wichtige-befehle">Wichtige Befehle<a class="headerlink" href="#wichtige-befehle" title="Permanent link">⚑</a></h3>
+<p>Ein ausgefuehrter Befehl fuehrt auch immer die vorhergehenden notwendigen Punkte des Lifecycle aus.</p>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mvn clean</td>
+<td>Cleans the project by deleting the target directory</td>
+</tr>
+<tr>
+<td>mvn compiler:compile</td>
+<td>Compiles the source classes</td>
+</tr>
+<tr>
+<td>mvn package</td>
+<td>Build the project and create the JAR/WAR files</td>
+</tr>
+<tr>
+<td>mvn install</td>
+<td>Build the project and install package files to local repository</td>
+</tr>
+<tr>
+<td>mvn deploy</td>
+<td>Deploy the build artifact to the remote repository</td>
+</tr>
+<tr>
+<td>mvn validate</td>
+<td>Validate the project is correct als everything is available</td>
+</tr>
+<tr>
+<td>mvn dependency:tree</td>
+<td>Generates the dependency tree of the project</td>
+</tr>
+<tr>
+<td>mvn dependency:analyze</td>
+<td>Analyze the project and identify the unused delcared dependencies</td>
+</tr>
+<tr>
+<td>mvn test</td>
+<td>Tests the source code</td>
+</tr>
+<tr>
+<td>mvn verify</td>
+<td>Run any checks on results of integration tests</td>
+</tr>
+<tr>
+<td>mvn compile</td>
+<td>compile the source code of the project</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1031,6 +1324,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../kotlin/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Kotlin">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Kotlin
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../bash_snippets/" class="md-footer__link md-footer__link--next" aria-label="Next: Bash snippets">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Bash snippets
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
