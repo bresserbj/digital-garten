@@ -6,7 +6,9 @@ nav:
   - Startingpoint: index.md
   - Coding:
       - Languages:
-          - Kotlin: coding/kotlin/kotlin.md
+          - Kotlin:
+            - coding/kotlin/kotlin.md
+            - Maven: coding/kotlin/maven.md
           - Bash:
               - Bash snippets: bash_snippets.md
           - SQL: coding/sql/sql.md
