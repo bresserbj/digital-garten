@@ -27,7 +27,9 @@ Unternehmens spricht.
 
 ------
 
-## Strategisch: Analyze von Business Domains
+### Strategisch
+
+#### Analyze von Business Domains
 
 Um eine effiziente Loesung du entwickeln muss man zuerst das Problem verstanden haben. In diesem Fall ist das Problem
 die Software, die es zu bauen gilt.
@@ -39,7 +41,7 @@ Es ist die Dienstleistung, die das Unternehmen für seine Kunden erbringt.
 Um die Ziele seines Geschaefsfelds zu erfuellen ist es fuer Unternehmen notwendig seine Aktivitaeten in Subdomains
 aufzuteilen. Alle Subdomains gemeinsam formen die Business Domain.
 
-### Subdomains
+##### Subdomains
 
 Eine Subdomain wird in drei Typen unterteilt: Core, Generic und Supporting
 Subdomains sind hierbei wie Karten eines Kartenhauses zu sehen: Nimmt man eine Karte weg faellt die Struktur in sich zusammen.
@@ -58,6 +60,72 @@ Um zwischen diesen Typen unterscheiden zu koennen macht es Sinn die nachfolgende
 
 ----
 
-## Strategisch: Domain Knowledge 
+#### Domain Knowledge 
+
+Um effiziente Software zu entwickeln, die die Beduerfnisse des Businesses abdeckt, ist es wichtig das Grundwissen ueber 
+die Business Domain zu erlangen. Dafuer ist es wichtig die Domain Experten zu verstehen, vor Allem wie diese ueber das 
+Problem denken. Ohne dieses Verstaendnis und die Gruende hinter den Anforderungen ist es nicht moeglich alle Aspekte 
+des Business abzudecken. 
+
+Der Schluessel hierzu liegt in der Kommunikation und der Schaffung einer gemeinsamen Sprache die ein gemeinsames 
+Verstaendnis bildet, ohne "Ubersetzungen" weiterer Parteien - dies wuerde nur dazu fuehren das falsche Loesungen 
+implementiert werden oder die richtigen Loesungen zu den falschen Problemen.
 
 
+#### Ubiquitous Language
+
+Eine allgegenwaertige Sprache ist der Grundpfeiler von Domain Driven Design und laesst sich leicht so erklaeren:
+
+> Wenn Parteien effizient miteinander kommunizieren sollen, muessen diese die gleiche Sprache sprechen.
+
+Die Sprache respresentiert in diesem Fall die Business Domain als auch das mentale Model des Domain Experten. Sie ist 
+vor Allem die Sprache des Businesses und sollte entsprechend nur Begriffe umfassen die in Verbindung mit der Business
+Domain stehen - kein technischer Jargon!
+
+Auch ist bei der allgegenwaertigen Sprache auf konsistenz zu achten. Sie soll praezise sein und jeder Begriff soll nur
+eine Bedeutung haben; sie koenne nicht austauschbar verwendet werden. Jeder Begriff ist ausdruecklich in seinem 
+spezifischem Zusammenhang zu verwenden.
+
+**Beispiel:**
+
+"Verkaufsprovisionen werden nach Genehmigung der Transaktion verbucht."
+
+nicht
+
+"Die Verkaufsprovisionen basieren auf korrelierten Datensaetzen aus den Tabellen der Transaktionen und der genehmigten Verkaeufe."
+
+### Model der Business Domain
+
+> A model is a simplified representation of a thing or phenomenon that intentionally emphasizes certain aspects while 
+> ignoring others. Abstraction with a specific use in mind.
+> 
+> -- <cite>Rebecca Wirfs-Brock</cite>
+
+Alle Modelle haben einen Zweck, der nur die Details enthaelt, die zur Erfuellung dieses Zwecks erforderlich sind.
+Ein Model soll hierbei ein Problem loesen, mit grade mal genug Informationen fuer diesen Zweck. 
+
+Die allgegenwaertige Srpache die wir verwenden ist nicht detailiert genug um die Domaine abzudecken. Das ist der Zweck
+des Modells, das gerade genug Aspekte der Business Domain enthalten soll, um eine Implementierung des erforderlichen 
+Systems zu ermoeglichen.
+
+### Tools:
+
+Ein Tool um die Business Domain besser zu verstehen ist ein **Glossar**, wobei dieses vorrangig fuer Nomen verwendet werden 
+kann und damit teilweise nicht die noetige Detailtiefe beinhaltet die man benoetigt.
+
+Ein anderes Tool sind **Gherkin Tests**. Tests geschrieben in Gherkin sind ein grossartiges Tool um die Sprache der 
+Business Domain abzubilden und um gleichzeitig die Luecken zwischen dem Domain Experten und den Entwicklern zu schliessen.
+
+**Beispiel:**
+
+```feature
+Scenario: Notify the agent about a new support case
+    Given Vicent Jules submits a new support case says:
+    """
+    I need help configuring AWS Infinidash
+    """
+    When the ticket is assigned to Mr. Wolf
+    Then the agent receives a notification about the new ticket
+```
+
+### Domain Komplexitaet
