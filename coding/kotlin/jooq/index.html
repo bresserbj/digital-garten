@@ -1,0 +1,1619 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="My personal digital garden">
+      
+      
+        <meta name="author" content="bresserbj">
+      
+      
+        <link rel="canonical" href="https://bresserbj.github.io/coding/kotlin/jooq/">
+      
+      
+        <link rel="prev" href="../maven/">
+      
+      
+        <link rel="next" href="../../../bash_snippets/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Joop - My digital garden</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/links.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#was-ist-jooq" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="My digital garden" class="md-header__button md-logo" aria-label="My digital garden" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My digital garden
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Joop
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="My digital garden" class="md-nav__button md-logo" aria-label="My digital garden" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My digital garden
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Startingpoint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Coding
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Coding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Languages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Languages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kotlin
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Kotlin
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maven/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maven
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    jOOQ
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    jOOQ
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#was-ist-jooq" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was ist jOOQ?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Was ist jOOQ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vorteile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vorteile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nachteile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nachteile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wann-setzte-ich-jooq-ein" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wann setzte ich jOOQ ein?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wie-funktioniert-jooq" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wie funktioniert jOOQ?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wie funktioniert jOOQ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#was-wird-fuer-die-generierung-benoetigt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was wird fuer die Generierung benoetigt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beispiel:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jooq-generiert" class="md-nav__link">
+    <span class="md-ellipsis">
+      jOOQ generiert
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nutzung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nutzung
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Bash
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Bash
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bash_snippets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bash snippets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/sql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Code Practices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Code Practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tdd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TDD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clean_code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clean Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software Architektur
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Software Architektur
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/goal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prinzipien
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Prinzipien
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/principles/principles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prinzipien
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/principles/solid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SOLID
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/principles/dry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DRY
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/principles/kiss/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KISS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/domain_driven_design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domain Driven Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/hexagonal_architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hexagonal Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GIT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rule_of_three/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rule of Three
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kultur
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Kultur
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fotografie
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Fotografie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../arts/photography/photography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Photography
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#was-ist-jooq" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was ist jOOQ?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Was ist jOOQ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vorteile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vorteile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nachteile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nachteile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wann-setzte-ich-jooq-ein" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wann setzte ich jOOQ ein?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wie-funktioniert-jooq" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wie funktioniert jOOQ?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wie funktioniert jOOQ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#was-wird-fuer-die-generierung-benoetigt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was wird fuer die Generierung benoetigt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beispiel:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jooq-generiert" class="md-nav__link">
+    <span class="md-ellipsis">
+      jOOQ generiert
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nutzung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nutzung
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>jOOQ</h1>
+
+<h3 id="was-ist-jooq">Was ist jOOQ?<a class="headerlink" href="#was-ist-jooq" title="Permanent link">⚑</a></h3>
+<p>jOOQ bietet eine typesichere, DSL-aehnliche API, mit der SQL-Abfragen direkt umgesetzt werden koennen.
+Anders als andere ORM-Frameworks wie zB Hibernate, setzt es hier darauf SQL auf eine praegnaten und saubere 
+Weise direkt in den Code zu integrieren, anstatt SQL zu abstrahieren.</p>
+<h4 id="vorteile">Vorteile<a class="headerlink" href="#vorteile" title="Permanent link">⚑</a></h4>
+<ol>
+<li>
+<p><strong>Typesicherheit</strong>:
+Jede Abfrage wird kompiliert, sodass Fehler wie falsche Spaltennamen oder ungueltige Datentypen waehrend der Kompilierung
+erkannt werden.</p>
+</li>
+<li>
+<p><strong>SQL-Unterstuetzung:</strong>
+Unterstuetzt die meisten SQL-Dialekte und erlaubt SQL nativ zu schreiben.</p>
+</li>
+<li>
+<p><strong>Erzeugung von Code:</strong>
+Generiert Klassen fuer Tabellen, Spalten und anderen Elemente. DAdurch kann das Objekt direkt verwendet werden, anstatt
+strings fuer die SQL-Abfragen zu schreiben.</p>
+</li>
+<li>
+<p><strong>Flexibilitaet:</strong> 
+Man muss sich sich nicht an ORM-Konventionen wie Entities und LazyLoading halten.</p>
+</li>
+<li>
+<p><strong>Leichte Integration:</strong>
+Funktioniert mit bestehenden JDBC-Treibern und mit anderen Frameworks wie SpringBoot.</p>
+</li>
+</ol>
+<h4 id="nachteile">Nachteile<a class="headerlink" href="#nachteile" title="Permanent link">⚑</a></h4>
+<ol>
+<li>
+<p><strong>SQL-Lastig:</strong>
+Erfordert SQL-Kenntnisse und direkte SQL-Integration in den Code.</p>
+</li>
+<li>
+<p><strong>Kein automatisches Caching:</strong> 
+Benoetigt man ein Caching muss dieses selbst implementiert oder durch ein separates Framework wie Redis eingefuehrt werden.
+Im Vergleich: Hibernate bietet ein integriertes First- und Second-Level-Caching an.</p>
+</li>
+<li>
+<p><strong>Codegenerierung:</strong>
+Die benoetigten Klassen muessen kompiliert werden und ist damit nicht im NoSQL-Bereich geeginet oder wenn dynamische
+Datenbankstrukturen notwendig sind.</p>
+</li>
+<li>
+<p><strong>Potenzielle SQL-Injektions:</strong>
+Auch wenn qOOQ typsicher ist, kann man durch die Implementierung roher SQL-Abfragen das Risiko fuer SQL-Injektions
+erhoehen - hier ist vorsicht bei der Entwicklung geboten.</p>
+</li>
+</ol>
+<h3 id="wann-setzte-ich-jooq-ein">Wann setzte ich jOOQ ein?<a class="headerlink" href="#wann-setzte-ich-jooq-ein" title="Permanent link">⚑</a></h3>
+<p>Es ist ideal wenn:</p>
+<ul>
+<li>SQL direkt und typesicher eingesetet werden soll</li>
+<li>man komplexe und massgeschneiderte Abfragen benoetigt</li>
+<li>man die kontrolle ueber die Datenbank-Interaktionen behalten moechte</li>
+</ul>
+<p>Es ist nicht ideal wenn:</p>
+<ul>
+<li>man nur einfache CRUD-Operationen benoetigt</li>
+<li>Caching oder ORM-Funktionen wie LazyLoading benoetigt werden</li>
+<li>eine dynamische DAtenbankstruktur vorliegt</li>
+</ul>
+<h3 id="wie-funktioniert-jooq">Wie funktioniert jOOQ?<a class="headerlink" href="#wie-funktioniert-jooq" title="Permanent link">⚑</a></h3>
+<p>jOOQ generiert die Klassen (z.B. fuer Tabellen, Views, Sequenzen) basierend auf der Datenbankstruktur. Dieser Prozess
+funktioniert wie folgt:</p>
+<ol>
+<li>Verbindung zur Datenbank</li>
+<li>Analyse der Struktur (Tabellen, Spalten, Typen, Constraints)</li>
+<li>Codegenerierung basierend auf den Metadaten, darunter Tabellen- und Record-Klassen</li>
+<li>Speicherung in <code>target/generated-sources/jooq</code></li>
+</ol>
+<h4 id="was-wird-fuer-die-generierung-benoetigt">Was wird fuer die Generierung benoetigt?<a class="headerlink" href="#was-wird-fuer-die-generierung-benoetigt" title="Permanent link">⚑</a></h4>
+<ol>
+<li>Maven-Plugin</li>
+<li>Datenbankverbindung - Details wie JDBC-Url, Benutzername, Passwort</li>
+<li>Generator-Konfiguration - Welche Datenbank wird verwendet, Ausschluss von Tabellen und Schemas, Zielort</li>
+</ol>
+<h4 id="beispiel">Beispiel:<a class="headerlink" href="#beispiel" title="Permanent link">⚑</a></h4>
+<p>Folgende Tabelle wurde erzeugt:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
+<span class="p">);</span>
+</code></pre></div>
+<h5 id="jooq-generiert">jOOQ generiert<a class="headerlink" href="#jooq-generiert" title="Permanent link">⚑</a></h5>
+<p><strong>Tabellenklasse:Users</strong>
+<div class="highlight"><pre><span></span><code><span class="k">package</span><span class="w"> </span><span class="nn">com.example.jooqdemo.generated.tables</span>
+
+<span class="k">import</span><span class="w"> </span><span class="nn">org.jooq.impl.TableImpl</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">org.jooq.TableField</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">org.jooq.impl.DSL</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">com.example.jooqdemo.generated.tables.records.UserRecord</span>
+
+<span class="kd">object</span><span class="w"> </span><span class="nc">Users</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">TableImpl</span><span class="o">&lt;</span><span class="n">UserRecord</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;users&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">ID</span><span class="p">:</span><span class="w"> </span><span class="n">TableField</span><span class="o">&lt;</span><span class="n">UserRecord</span><span class="p">,</span><span class="w"> </span><span class="kt">Long</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createField</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DSL</span><span class="p">.</span><span class="na">bigint</span><span class="p">(),</span><span class="w"> </span><span class="k">this</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">NAME</span><span class="p">:</span><span class="w"> </span><span class="n">TableField</span><span class="o">&lt;</span><span class="n">UserRecord</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createField</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DSL</span><span class="p">.</span><span class="na">varchar</span><span class="p">(</span><span class="m">100</span><span class="p">),</span><span class="w"> </span><span class="k">this</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">EMAIL</span><span class="p">:</span><span class="w"> </span><span class="n">TableField</span><span class="o">&lt;</span><span class="n">UserRecord</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createField</span><span class="p">(</span><span class="s">&quot;email&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DSL</span><span class="p">.</span><span class="na">varchar</span><span class="p">(</span><span class="m">100</span><span class="p">),</span><span class="w"> </span><span class="k">this</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>POJO:User</strong>
+<div class="highlight"><pre><span></span><code><span class="k">package</span><span class="w"> </span><span class="nn">com.example.jooqdemo.generated.tables.pojos</span>
+
+<span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="kt">Long?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">name</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">email</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span>
+<span class="p">)</span>
+</code></pre></div></p>
+<p><strong>Record:UserRecord</strong>
+<div class="highlight"><pre><span></span><code><span class="k">package</span><span class="w"> </span><span class="nn">com.example.jooqdemo.generated.tables.records</span>
+
+<span class="k">import</span><span class="w"> </span><span class="nn">org.jooq.impl.UpdatableRecordImpl</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nc">UserRecord</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">UpdatableRecordImpl</span><span class="o">&lt;</span><span class="n">UserRecord</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Users</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="kt">Long?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">name</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">email</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h5 id="nutzung">Nutzung<a class="headerlink" href="#nutzung" title="Permanent link">⚑</a></h5>
+<div class="highlight"><pre><span></span><code><span class="k">package</span><span class="w"> </span><span class="nn">com.example.jooqdemo.config</span>
+
+<span class="k">import</span><span class="w"> </span><span class="nn">org.jooq.DSLContext</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">org.jooq.impl.DSL</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.Bean</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.Configuration</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">javax.sql.DataSource</span>
+
+<span class="nd">@Configuration</span>
+<span class="kd">class</span><span class="w"> </span><span class="nc">JooqConfig</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">dataSource</span><span class="p">:</span><span class="w"> </span><span class="n">DataSource</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nd">@Bean</span>
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">dslContext</span><span class="p">():</span><span class="w"> </span><span class="n">DSLContext</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">DSL</span><span class="p">.</span><span class="na">using</span><span class="p">(</span><span class="n">dataSource</span><span class="p">.</span><span class="na">connection</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">package</span><span class="w"> </span><span class="nn">com.example.jooqdemo.repository</span>
+
+<span class="k">import</span><span class="w"> </span><span class="nn">com.example.jooqdemo.generated.tables.Users</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">com.example.jooqdemo.generated.tables.Orders</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">com.example.jooqdemo.generated.tables.pojos.User</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">org.jooq.DSLContext</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">org.springframework.stereotype.Repository</span>
+
+<span class="nd">@Repository</span>
+<span class="kd">class</span><span class="w"> </span><span class="nc">UserRepository</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">dsl</span><span class="p">:</span><span class="w"> </span><span class="n">DSLContext</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// INSERT: Benutzer hinzufügen</span>
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">addUser</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dsl</span><span class="p">.</span><span class="na">insertInto</span><span class="p">(</span><span class="n">Users</span><span class="p">.</span><span class="na">USERS</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="na">columns</span><span class="p">(</span><span class="n">Users</span><span class="p">.</span><span class="na">USERS</span><span class="p">.</span><span class="na">NAME</span><span class="p">,</span><span class="w"> </span><span class="n">Users</span><span class="p">.</span><span class="na">USERS</span><span class="p">.</span><span class="na">EMAIL</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="na">values</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="na">execute</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// UPDATE: Benutzer-E-Mail aktualisieren</span>
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">updateUserEmail</span><span class="p">(</span><span class="n">userId</span><span class="p">:</span><span class="w"> </span><span class="kt">Long</span><span class="p">,</span><span class="w"> </span><span class="n">newEmail</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dsl</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="n">Users</span><span class="p">.</span><span class="na">USERS</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">Users</span><span class="p">.</span><span class="na">USERS</span><span class="p">.</span><span class="na">EMAIL</span><span class="p">,</span><span class="w"> </span><span class="n">newEmail</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="n">Users</span><span class="p">.</span><span class="na">USERS</span><span class="p">.</span><span class="na">ID</span><span class="p">.</span><span class="na">eq</span><span class="p">(</span><span class="n">userId</span><span class="p">))</span>
+<span class="w">            </span><span class="p">.</span><span class="na">execute</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// DELETE: Benutzer löschen</span>
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">deleteUserById</span><span class="p">(</span><span class="n">userId</span><span class="p">:</span><span class="w"> </span><span class="kt">Long</span><span class="p">):</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dsl</span><span class="p">.</span><span class="na">deleteFrom</span><span class="p">(</span><span class="n">Users</span><span class="p">.</span><span class="na">USERS</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="n">Users</span><span class="p">.</span><span class="na">USERS</span><span class="p">.</span><span class="na">ID</span><span class="p">.</span><span class="na">eq</span><span class="p">(</span><span class="n">userId</span><span class="p">))</span>
+<span class="w">            </span><span class="p">.</span><span class="na">execute</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// JOIN: Benutzer mit Bestellungen abrufen</span>
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">findUsersWithOrders</span><span class="p">():</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&lt;</span><span class="n">User</span><span class="p">,</span><span class="w"> </span><span class="kt">Int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dsl</span><span class="p">.</span><span class="na">select</span><span class="p">(</span><span class="n">Users</span><span class="p">.</span><span class="na">USERS</span><span class="p">.</span><span class="na">asterisk</span><span class="p">(),</span><span class="w"> </span><span class="n">Orders</span><span class="p">.</span><span class="na">ORDERS</span><span class="p">.</span><span class="na">ID</span><span class="p">.</span><span class="na">count</span><span class="p">())</span>
+<span class="w">            </span><span class="p">.</span><span class="na">from</span><span class="p">(</span><span class="n">Users</span><span class="p">.</span><span class="na">USERS</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="na">join</span><span class="p">(</span><span class="n">Orders</span><span class="p">.</span><span class="na">ORDERS</span><span class="p">).</span><span class="na">on</span><span class="p">(</span><span class="n">Users</span><span class="p">.</span><span class="na">USERS</span><span class="p">.</span><span class="na">ID</span><span class="p">.</span><span class="na">eq</span><span class="p">(</span><span class="n">Orders</span><span class="p">.</span><span class="na">ORDERS</span><span class="p">.</span><span class="na">USER_ID</span><span class="p">))</span>
+<span class="w">            </span><span class="p">.</span><span class="na">groupBy</span><span class="p">(</span><span class="n">Users</span><span class="p">.</span><span class="na">USERS</span><span class="p">.</span><span class="na">ID</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="na">fetch</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">record</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span>
+<span class="w">                </span><span class="kd">val</span><span class="w"> </span><span class="nv">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">record</span><span class="p">.</span><span class="na">into</span><span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">class</span><span class="p">.</span><span class="na">java</span><span class="p">)</span>
+<span class="w">                </span><span class="kd">val</span><span class="w"> </span><span class="nv">orderCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">record</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">Orders</span><span class="p">.</span><span class="na">ORDERS</span><span class="p">.</span><span class="na">ID</span><span class="p">.</span><span class="na">count</span><span class="p">())</span>
+<span class="w">                </span><span class="n">user</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">orderCount</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Raw SQL: Manuelle SQL-Abfrage</span>
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">rawQuery</span><span class="p">():</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dsl</span><span class="p">.</span><span class="na">fetch</span><span class="p">(</span><span class="s">&quot;SELECT * FROM users WHERE email LIKE ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%example.com%&quot;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="na">into</span><span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">class</span><span class="p">.</span><span class="na">java</span><span class="p">)</span><span class="w"> </span><span class="c1">// Mappe das Ergebnis auf das `User`-POJO</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">package</span><span class="w"> </span><span class="nn">com.example.jooqdemo.service</span>
+
+<span class="k">import</span><span class="w"> </span><span class="nn">com.example.jooqdemo.repository.UserRepository</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">com.example.jooqdemo.generated.tables.pojos.User</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">org.springframework.stereotype.Service</span>
+
+<span class="nd">@Service</span>
+<span class="kd">class</span><span class="w"> </span><span class="nc">UserService</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">userRepository</span><span class="p">:</span><span class="w"> </span><span class="n">UserRepository</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">addUser</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">userRepository</span><span class="p">.</span><span class="na">addUser</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">updateUserEmail</span><span class="p">(</span><span class="n">userId</span><span class="p">:</span><span class="w"> </span><span class="kt">Long</span><span class="p">,</span><span class="w"> </span><span class="n">newEmail</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">userRepository</span><span class="p">.</span><span class="na">updateUserEmail</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span><span class="w"> </span><span class="n">newEmail</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">deleteUserById</span><span class="p">(</span><span class="n">userId</span><span class="p">:</span><span class="w"> </span><span class="kt">Long</span><span class="p">):</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">userRepository</span><span class="p">.</span><span class="na">deleteUserById</span><span class="p">(</span><span class="n">userId</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">findUsersWithOrders</span><span class="p">():</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&lt;</span><span class="n">User</span><span class="p">,</span><span class="w"> </span><span class="kt">Int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">userRepository</span><span class="p">.</span><span class="na">findUsersWithOrders</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">rawQuery</span><span class="p">():</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">userRepository</span><span class="p">.</span><span class="na">rawQuery</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../maven/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Maven">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Maven
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../bash_snippets/" class="md-footer__link md-footer__link--next" aria-label="Next: Bash snippets">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Bash snippets
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/bresserbj" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.instant", "navigation.top", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
