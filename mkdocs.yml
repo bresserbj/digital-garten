@@ -9,6 +9,7 @@ nav:
           - Kotlin:
             - coding/kotlin/kotlin.md
             - Maven: coding/kotlin/maven.md
+            - jOOQ: coding/kotlin/jooq.md
           - Bash:
               - Bash snippets: bash_snippets.md
           - SQL: coding/sql/sql.md
